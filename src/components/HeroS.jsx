@@ -1,6 +1,8 @@
 import React from "react";
+import { Slide } from "react-awesome-reveal";
 import { Badge } from "@/components/ui/badge";
-import { motion } from "framer-motion"; // Corrected import path
+import { motion } from "framer-motion";
+import Timer from "./Timer"
 
 const HeroS = () => {
   return (
@@ -11,23 +13,23 @@ const HeroS = () => {
       {/* Logo */}
       <div className="absolute top-5 left-5 z-10">
         <img
-          src="src/assets/rex-modified.png"
+          src="/rex-modified.png"
           className="h-12 w-12 rounded-full object-cover"
           alt="Rexpond Logo"
         />
       </div>
 
       {/* Waitlist Badge */}
-      <div className="absolute top-6 left-1/2 -translate-x-1/2 z-10">
-        <div className="flex items-center gap-2 bg-white px-4 py-1 rounded-full shadow-md">
+      <Slide direction="right" delay="300" className="absolute top-6 left-[76%] md:left-1/2 -translate-x-1/2 z-10 md:w-72 w-60 h-9 rounded-full bg-white border border-gray-300 shadow-sm flex items-center justify-end px-2">
+        <div className="flex items-center gap-2 bg-white px-4 py-1 rounded-full">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png"
             className="h-4 w-4"
             alt="Gmail"
           />
-          <p className="text-xs text-black font-medium">Join Waitlist</p>
+          <p className="text-sm text-black font-medium">Join Waitlist</p>
         </div>
-      </div>
+      </Slide>
 
       {/* Main Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full mt-20 text-center">
@@ -37,11 +39,11 @@ const HeroS = () => {
           transition={{ duration: 0.6 }}
           className="flex flex-col items-center"
         >
-          <Badge className="bg-gray-950 border border-gray-800 rounded-full px-4 py-2 text-gray-300 text-sm md:text-base mb-6">
+          <Badge className="bg-gray-950 border border-gray-800 rounded-full px-4 py-2 text-gray-300 text-sm md:text-base mb-3">
             Coming Soon
           </Badge>
 
-          <h1 className="bg-gradient-to-b from-white via-gray-700 to-gray-400 inline-block text-transparent bg-clip-text font-bold text-4xl md:text-6xl lg:text-7xl max-w-[90%] md:max-w-[70%] leading-tight mb-4">
+          <h1 className="bg-gradient-to-b from-white via-gray-700 to-gray-200 inline-block text-transparent bg-clip-text font-bold text-4xl md:text-6xl lg:text-7xl max-w-[90%] md:max-w-[70%] leading-tight">
             Your AI-Powered Inbox Is Almost Here
           </h1>
 
@@ -55,6 +57,9 @@ const HeroS = () => {
           </motion.p>
         </motion.div>
       </div>
+      <Slide direction="top" duration={500} className="mt-10 w-full flex items-center justify-center">
+        <Timer />
+      </Slide>
     </div>
   );
 };
