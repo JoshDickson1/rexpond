@@ -39,34 +39,40 @@ const Timer = () => {
   }
 
   return (
-    <div className="w-full flex flex-col items-center justify-center py-5 px-5">
-      {/* <h1 className="text-center text-4xl md:text-6xl font-bold text-white mb-10">
-        Countdown to Launch
-      </h1> */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
-        {['Days', 'Hours', 'Minutes', 'Seconds'].map((label, index) => {
-          const value = [timeLeft.days, timeLeft.hours, timeLeft.minutes, timeLeft.seconds][index]
-          return (
-            <div key={label} className="flex flex-col items-center bg-white/10 rounded-xl p-4 min-w-[80px] sm:min-w-[100px]">
-              <AnimatePresence mode="popLayout">
-                <motion.div
-                  key={value}
-                  variants={timeVariants}
-                  initial="initial"
-                  animate="animate"
-                  exit="exit"
-                  transition={{ duration: 0.5 }}
-                  className="text-4xl md:text-5xl font-semibold text-white"
-                >
-                  {value.toString().padStart(2, '0')}
-                </motion.div>
-              </AnimatePresence>
-              <span className="mt-2 text-sm text-gray-300">{label}</span>
-            </div>
-          )
-        })}
-      </div>
-    </div>
+    <div className="w-full md:w-[70%] flex flex-col items-center justify-center py-12 px-10 bg-white/10 rounded-xl relative z-10 overflow-hidden">
+  {/* Decorative Circle */}
+  <div className="absolute -top-10 -left-10 h-52 w-52 bg-white opacity-10 blur-2xl rounded-full z-0" />
+  <div className="absolute -bottom-10 -right-10 h-52 w-52 bg-blue-500 opacity-10 blur-2xl rounded-full z-0" />
+
+  <h1 className="text-center text-xl md:text-2xl font-bold text-white mb-10 z-10">
+    Unlock AI Productivity In
+  </h1>
+
+  <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center z-10">
+    {['Days', 'Hours', 'Minutes', 'Seconds'].map((label, index) => {
+      const value = [timeLeft.days, timeLeft.hours, timeLeft.minutes, timeLeft.seconds][index]
+      return (
+        <div key={label} className="flex flex-col items-center min-w-[80px] sm:min-w-[100px] bg-white/5 rounded-xl p-4">
+          <AnimatePresence mode="popLayout">
+            <motion.div
+              key={value}
+              variants={timeVariants}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              transition={{ duration: 0.5 }}
+              className="text-4xl md:text-5xl font-semibold text-white"
+            >
+              {value.toString().padStart(2, '0')}
+            </motion.div>
+          </AnimatePresence>
+          <span className="mt-2 text-2xl text-gray-300">{label}</span>
+        </div>
+      )
+    })}
+  </div>
+</div>
+
   )
 }
 

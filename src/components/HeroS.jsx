@@ -39,11 +39,11 @@ const HeroS = () => {
           transition={{ duration: 0.6 }}
           className="flex flex-col items-center"
         >
-          <Badge className="bg-gray-950 border border-gray-800 rounded-full px-4 py-2 text-gray-300 text-sm md:text-base mb-3">
+          <Badge className="bg-gray-950 border border-gray-800 rounded-full px-4 py-2 text-gray-300 text-sm md:text-base mb-6">
             Coming Soon
           </Badge>
 
-          <h1 className="bg-gradient-to-b from-white via-gray-700 to-gray-200 inline-block text-transparent bg-clip-text font-bold text-4xl md:text-6xl lg:text-7xl max-w-[90%] md:max-w-[70%] leading-tight">
+          <h1 className="bg-gradient-to-b from-white via-gray-700 to-gray-200 inline-block text-transparent bg-clip-text font-bold text-4xl md:text-6xl lg:text-7xl max-w-[90%] md:max-w-[70%] leading-tight mb-4">
             Your AI-Powered Inbox Is Almost Here
           </h1>
 
