@@ -1,8 +1,10 @@
 import React from "react";
 import { Slide } from "react-awesome-reveal";
+import { Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
-import Timer from "./Timer"
+import Timers from "./Timers"
+import Newsletter from "./Newsletter"
 
 const HeroS = () => {
   return (
@@ -21,14 +23,14 @@ const HeroS = () => {
 
       {/* Waitlist Badge */}
       <Slide direction="right" delay="300" className="absolute top-6 left-[76%] md:left-1/2 -translate-x-1/2 z-10 md:w-72 w-60 h-9 rounded-full bg-white border border-gray-300 shadow-sm flex items-center justify-end px-2">
-        <div className="flex items-center gap-2 bg-white px-4 py-1 rounded-full">
+        <a href="#news" className="flex items-center gap-2 bg-white px-4 py-1 rounded-full">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png"
             className="h-4 w-4"
             alt="Gmail"
           />
           <p className="text-sm text-black font-medium">Join Waitlist</p>
-        </div>
+        </a>
       </Slide>
 
       {/* Main Content */}
@@ -58,7 +60,10 @@ const HeroS = () => {
         </motion.div>
       </div>
       <Slide direction="top" duration={500} className="mt-10 w-full flex items-center justify-center">
-        <Timer />
+        <Timers />
+      </Slide>
+      <Slide direction="top" duration={500} className="mt-10 w-full flex items-center justify-center">
+        <Newsletter />
       </Slide>
     </div>
   );

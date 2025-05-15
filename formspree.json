@@ -1,0 +1,9 @@
+{
+  "forms": {
+    "Newsletter": {
+      "name": "Newsletter",
+      "actions": [{ "type": "email", "to": "jodicksonjoshua@gmail.com" }],
+      "fields": {"email": {"required": "true", "type": "email"}}
+    }
+  }
+}
