@@ -1,8 +1,6 @@
 *{
-    background: #000;
+    background: #fff;
     box-sizing: border-box;
-    height: 100dvh;
-    width: 100%;
 }
 
 .brave{
@@ -17,7 +15,7 @@
 }
 
 h1{
-    font-size: larger;
+    font-size: 4rem;
     color: crimson;
     font-weight: 700;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
