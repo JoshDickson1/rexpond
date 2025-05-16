@@ -22,8 +22,8 @@ const HeroS = () => {
       </div>
 
       {/* Waitlist Badge */}
-      <Slide direction="right" delay="300" className="absolute top-6 left-[76%] md:left-1/2 -translate-x-1/2 z-10 md:w-72 w-60 h-9 rounded-full bg-white border border-gray-300 shadow-sm flex items-center justify-end px-2">
-        <a href="#news" className="flex items-center gap-2 bg-white px-4 py-1 rounded-full">
+      <Slide direction="right" className="absolute top-6 left-[76%] md:left-1/2 -translate-x-1/2 z-10 md:w-72 md:w-60 w-max h-9 rounded-full bg-white border border-gray-300 shadow-sm flex items-center justify-end px-2">
+        <a href="https://forms.gle/LQPw3Lr1y1jQN8kv5" className="flex items-center gap-2 bg-white px-4 py-1 rounded-full">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png"
             className="h-4 w-4"
@@ -62,9 +62,7 @@ const HeroS = () => {
       <Slide direction="top" duration={500} className="mt-10 w-full flex items-center justify-center">
         <Timers />
       </Slide>
-      <Slide direction="top" duration={500} className="mt-10 w-full flex items-center justify-center">
         <Newsletter />
-      </Slide>
     </div>
   );
 };
