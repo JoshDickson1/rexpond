@@ -73,15 +73,15 @@ const Footer = () => {
           {/* Left: Links and Socials */}
           <div className="flex flex-col md:flex-row items-center justify-center md:justify-start gap-6">
             <div className="flex gap-4">
-              <Twitter className="h-6 text-white/70" />
-              <Facebook className="h-6 text-white/70" />
-              <Instagram className="h-6 text-white/70" />
-              <Github className="h-6 text-white/70" />
+              <a href="https://x.com/Dickson53194258"><Twitter className="h-6 text-white/70" /></a>
+              <a href="https://www.facebook.com/profile.php?id=100089006016145"><Facebook className="h-6 text-white/70" /></a>
+              <a href="https://www.instagram.com/_dickson378/"><Instagram className="h-6 text-white/70" /></a>
+              <a href="https://github.com/JoshDickson1"><Github className="h-6 text-white/70" /></a>
             </div>
             <div className="flex flex-wrap justify-center md:justify-start gap-2">
-              <Button variant="ghost" className="text-white/70">Privacy Policy</Button>
-              <Button variant="ghost" className="text-white/70">Terms & Conditions</Button>
-              <Button variant="ghost" className="text-white/70">Support</Button>
+              <Button className="text-white/70">Privacy Policy</Button>
+              <Button className="text-white/70">Terms & Conditions</Button>
+              <Button className="text-white/70">Support</Button>
             </div>
           </div>
 
