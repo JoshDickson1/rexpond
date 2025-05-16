@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Why = () => {
   return (
-    <div className="flex flex-col items-center justify-between px-4 md:px-6 py-6 text-black relative overflow-hidden">
+    <div className="flex flex-col items-center justify-between px-4 md:px-6 py-6 text-black relative overflow-hidden pb-20">
       {/* Background blur gradients */}
       <div className="absolute top-70 -left-10 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-gradient-to-b from-gray-950 via-blue-900 to-gray-950 opacity-30 blur-3xl z-0" />
       <div className="absolute -bottom-40 -right-20 w-[600px] h-[600px] rounded-full bg-gradient-to-b from-gray-950 via-blue-900 to-gray-950 opacity-30 blur-3xl z-0" />

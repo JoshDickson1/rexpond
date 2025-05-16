@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import HeroS from './components/HeroS'
 import FeatureShowcase from './components/FeatureShowcase'
 import Why from './components/Why'
+import Footer from './components/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,6 +14,7 @@ function App() {
       <HeroS />
       <FeatureShowcase />
       <Why />
+      <Footer />
     </div>
   )
 }
